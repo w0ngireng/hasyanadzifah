@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media - Hasa</title>
+  <link rel="stylesheet" href="style6.css" />
+</head>
+<body>
+    <div id="transition-overlay"></div>
+  <header>
+    <nav class="container">
+      <a href="index1.html" class="logo">hasa</a>
+      <ul class="nav-links">
+        <li><a href="about1.html">About</a></li>
+        <a href="index1.html#portfolio">Work</a>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container layout-design">
+    <h1 class="section-title">Social Media</h1>
+
+    <section class="layout-item">
+      <img src="gambar/zanora.png" alt="Zanora Instagram layout" class="layout-image" />
+      <div class="layout-text">
+        <h2>Zanora</h2>
+        <span class="tag">2025</span>
+        <p class="layout-caption">Instagram Layout - Zanora</p>
+        <p class="layout-desc">
+          The Instagram content for Zanora features a clean layout and soft, feminine visuals, combining calming Islamic elements with elegant design. The posts include Islamic quotes and product highlights, targeting modern Muslim women aged 18–35 through a minimalist and cohesive feed style. The designs were created using Adobe Illustrator, and Canva. as part of my ongoing remote work with the brand.
+        </p>
+      </div>
+    </section>
+
+    <section class="layout-item">
+      <img src="gambar/fundex.png" alt="FundEx Instagram layout" class="layout-image" />
+      <div class="layout-text">
+        <h2>FundEx</h2>
+        <span class="tag">2024</span>
+        <p class="layout-caption">Instagram Layout - Internship - FundEx</p>
+        <p class="layout-desc">
+          Created during my internship at FundEx. Focuses on clean, informative visuals with a dominant blue color palette that reflects the brand’s identity. The posts were designed to communicate financial tips and promotional messages in a professional yet engaging style. All designs were developed using Adobe Illustrator and Canva, with the goal of maintaining consistency across the feed while supporting FundEx’s corporate image.
+        </p>
+      </div>
+    </section>
+
+<section class="layout-item">
+  <img src="gambar/kokakola.png" alt="Coca-Cola phone layout" class="layout-image" />
+  <div class="layout-text">
+    <h2>Coca-Cola</h2>
+    <span class="tag">2024</span>
+    <p class="layout-caption">Instagram Layout - Campaign Poster Design</p>
+    <p class="layout-desc">
+      The Coca-Cola campaign content was designed to highlight themes of togetherness, love, and shared moments. Using the brand’s signature red and the iconic soda bottle as key visuals, the designs capture a warm and joyful atmosphere.
+    </p>
+  </div>
+  <div class="gambar">
+    <img src="gambar/kokakolaposter.png" alt="Poster 1" class="layout-image" />
+    <img src="gambar/mokapkokakolaposter.png" alt="Poster 2" class="layout-image" />
+  </div>
+</section>
+
+
+</main>
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Let's work together</h2>
+      </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <p>Feel free to reach out for projects, feedback, or just to say hi.You can also find me on social media:</p>
+              <div class="social-links">
+                <a href="https://behance.net/hasyanadzifah" title="Behance">🎨</a>
+                <a href="https://www.linkedin.com/in/hasyanadzifah" title="LinkedIn" target="_blank">💼</a>
+                <a href="https://www.instagram.com/me.gykty_nu" title="Instagram" target="_blank">📷</a>
+              </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Type your message here</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+    const links = document.querySelectorAll('a[href]');
+    const overlay = document.getElementById('transition-overlay');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const target = link.getAttribute('href');
+
+            if (!target.startsWith('#') && !link.target) {
+                e.preventDefault();
+                overlay.classList.add('active');
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 500); 
+            }
+        });
+    });
+</script>
+</html>

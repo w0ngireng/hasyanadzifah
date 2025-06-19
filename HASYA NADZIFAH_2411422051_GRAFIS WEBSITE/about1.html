@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasa - About</title>
+    <link rel="stylesheet" href="style21.css">
+</head>
+<body>
+    <div id="transition-overlay"></div>
+    <header>
+        <nav class="container">
+            <a href="index1.html" class="logo">hasa</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <a href="index1.html#portfolio">Work</a>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="profile-section">
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="gambar/muka hasa bio.png">
+                    </div>
+                    
+                    <div class="profile-info">
+                        <h1>Bio</h1>
+                        <p>Design student with a curious mind and a love for visual storytelling. Often found tweaking color palettes at 1 AM, or quietly staring at posters in public spaces.</p>
+
+                        <div class="profile-details">
+                            <h3>Hasya Nadzifah</h3>
+                            <p>Student. Designer.</p>
+                            <p>Visual thinker</p>
+                            <p>In progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill" class="skills-section">
+            <div class="container">
+                <div class="skills-container">
+                    <div class="intro-text">
+                        <p>I'm not the best yet, and that's the point.</p>
+                        <p>I study Visual Communication Design to understand how ideas take shape—and how visuals speak when words fall short.</p>
+                        <p>Most of the time, I design with more questions than answers, but that's where the growth begins.</p>
+                        <p>This portfolio is a glimpse of that process.</p>
+
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">Still a student, but highly caffeinated.</div>
+                        <div class="skill-description">
+                            Currently available for design projects, feedback sessions, or deep talks about font choices—preferably after a good nap.
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header"> Don't worry, I don't bite. Just overthink.</div>
+                        <div class="skill-description">
+                            Let's talk if you have a project that needs thoughtful visuals, honest process, and a lot of Ctrl+Z moment.           
+                            📝 Projects I've done so far include: student design tasks, poster illustrations, event branding, and more in progress.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <h2>Let's work together</h2>
+                    </div>
+
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <p>Feel free to reach out for projects, feedback, or just to say hi.You can also find me on social media:</p>
+                            <div class="social-links">
+                                <a href="https://behance.net/hasyanadzifah" title="Behance">🎨</a>
+                                <a href="https://www.linkedin.com/in/hasyanadzifah" title="LinkedIn" target="_blank">💼</a>
+                                <a href="https://www.instagram.com/me.gykty_nu" title="Instagram" target="_blank">📷</a>
+                            </div>
+                        </div>
+
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Type your message here</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const links = document.querySelectorAll('a[href]');
+    const overlay = document.getElementById('transition-overlay');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const target = link.getAttribute('href');
+
+            if (!target.startsWith('#') && !link.target) {
+                e.preventDefault();
+                overlay.classList.add('active');
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 500); 
+            }
+        });
+    });
+</script>
+</html>

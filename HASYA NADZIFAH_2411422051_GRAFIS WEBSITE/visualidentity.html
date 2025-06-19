@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Identity</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+    <div id="transition-overlay"></div>
+    <header>
+    <nav class="container">
+        <a href="index1.html" class="logo">hasa</a>
+        <ul class="nav-links">
+            <li><a href="about1.html">About</a></li> 
+            <a href="index1.html#portfolio">Work</a>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+  <main class="container">
+    <div class="page-title">
+      <h1>Visual Identity</h1>
+      <span class="tag">2023</span>
+      <div class="breadcrumbs">Client Work · Logo Design · Character Design · VESPATOH</div>
+    </div>
+
+    <section class="intro-section">
+      <div class="intro-image">
+        <img src="gambar/tokopedia mokap vespatoh.png" alt="Laptop Visual" />
+      </div>
+      <div class="intro-text">
+        <h2>Founded in August 2021 by Muhamad Anba Fitrah,</h2>
+        <p>
+          VESPATOH was born from a deep passion for vintage Vespa scooters, which later evolved into a promising business venture. More than just a place for buying and selling, VESPATOH serves as a community space—sharing stories, experiences, and love for Vespa classics.
+        </p>
+        <p>
+          The brand embraces the spirit of nostalgia, freedom, and connection among scooter enthusiasts. Through careful restoration, honest transactions, and a warm community spirit, VESPATOH invites everyone to rediscover the charm of classic rides.
+        </p>
+        <p>
+          Whether you're a long-time Vespa lover or a new enthusiast, VESPATOH provides a reliable and joyful experience that goes beyond commerce. It’s about preserving history, embracing identity, and building meaningful connections.
+        </p>
+      </div>
+    </section>
+
+    <section class="logo-section">
+      <h2>Logos</h2>
+      <p>
+        The VESPATOH logo is designed with a strong retro identity, featuring bold vintage-style lettering combined with elements inspired by Vespa classics—like the iconic headlamp, handlebar silhouette, or scooter profile. The overall look evokes a sense of movement and nostalgia, while also remaining modern and adaptable.
+      </p>
+      <img src="gambar/logo mokap vespatoh.png" alt="Logo Sign" class="logo-sign" />
+
+      <p>The chosen color palette reflects the earthy, vintage spirit of Vespa’s golden era:</p>
+      <div class="color-palette">
+        <div class="color-box" style="background-color: #f9cc23">
+          #f9cc23 <span>Energy and optimism</span>
+        </div>
+        <div class="color-box" style="background-color: #39757f">
+          #39757f <span>Stability and classic vibes</span>
+        </div>
+        <div class="color-box" style="background-color: #191617; color: #fff">
+          #191617 <span>Polished and timelessness</span>
+        </div>
+      </div>
+      <p>
+        These colors come together to form a visual system that captures the brand’s character: classic, trustworthy, and full of personality.
+      </p>
+      <img src="gambar/logovespatoh.png" alt="Logo VESPATOH" class="logo-main" />
+    </section>
+
+    <section class="mascot-section">
+      <h2>Mascot</h2>
+      <img src="gambar/maskot vespatoh.png" alt="Mascot Design" class="mascot-img" />
+    </main>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <h2>Let's work together</h2>
+                        <p>Feel free to reach out for projects, feedback, or just to say hi.</p>
+                    </div>
+
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <p>I'm always open to discussing new projects or ideas...</p>
+                            <div class="social-links">
+                              <a href="https://behance.net/hasyanadzifah" title="Behance">🎨</a>
+                              <a href="https://www.linkedin.com/in/hasyanadzifah" title="LinkedIn" target="_blank">💼</a>
+                              <a href="https://www.instagram.com/me.gykty_nu" title="Instagram" target="_blank">📷</a>
+                            </div>
+                        </div>
+                        
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Type your message here</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+<script>
+    const links = document.querySelectorAll('a[href]');
+    const overlay = document.getElementById('transition-overlay');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const target = link.getAttribute('href');
+
+            if (!target.startsWith('#') && !link.target) {
+                e.preventDefault();
+                overlay.classList.add('active');
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 500); 
+            }
+        });
+    });
+</script>
+</html>
